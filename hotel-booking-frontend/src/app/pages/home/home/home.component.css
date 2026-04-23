@@ -1,0 +1,113 @@
+/* 🔥 HERO */
+.hero {
+  height: 340px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* 🔥 SEARCH WRAPPER */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* 🔥 SEARCH BOX */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* 🔥 INPUT */
+.search-input {
+  position: relative;
+}
+
+.search-input input {
+  padding: 12px 40px 12px 15px;
+  border-radius: 10px;
+  border: none;
+  width: 260px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* 🔥 ICON */
+.search-input span {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+/* 🔥 BUTTON */
+.search-box button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  transform: scale(1.05);
+}
+
+/* 🔥 CONTAINER */
+.container {
+  padding: 30px;
+}
+
+/* 🔥 TITLE */
+.section-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* 🔥 GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* 🔥 LOADER */
+.loader-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* 🔥 EMPTY */
+.no-data {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #777;
+}

@@ -1,0 +1,58 @@
+.page {
+  padding: 30px;
+}
+
+.card {
+  width: 350px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+.card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, purple, blue);
+  color: white;
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.promo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(to right, purple, blue);
+  color: white;
+}
+
+.delete {
+  background: white;
+  color: red;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+}

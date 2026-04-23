@@ -1,0 +1,17 @@
+.profile-box {
+  width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  color: white;
+  border: none;
+  padding: 10px;
+}

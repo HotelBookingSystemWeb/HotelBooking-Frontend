@@ -1,0 +1,109 @@
+.dashboard {
+  padding: 20px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  min-height: 120px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.users {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.bookings {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.hotels {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.revenue {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+}
+
+.card-content p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: white;
+  opacity: 0.95;
+}
+
+.bottom {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.panel h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.panel p {
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+.activity-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}

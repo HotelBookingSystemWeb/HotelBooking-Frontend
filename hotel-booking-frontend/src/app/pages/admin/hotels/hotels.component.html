@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<div class="page">
+
+  <h2 class="title">Manage Hotels</h2>
+
+  <!-- 🔥 ADD HOTEL FORM -->
+  <div class="form-card">
+
+    <input placeholder="Hotel Name" [(ngModel)]="newHotel.name" />
+    <input placeholder="Location" [(ngModel)]="newHotel.location" />
+    <input placeholder="Description" [(ngModel)]="newHotel.description" />
+
+    <button (click)="add()">Add Hotel</button>
+
+  </div>
+
+  <!-- 🔥 HOTEL LIST -->
+  <div class="grid">
+
+    <div class="hotel-card" *ngFor="let h of hotels">
+
+      <!-- 🔥 IMAGE -->
+      <img [src]="'assets/images/hotel' + ((h.id % 4) + 1) + '.avif'" />
+
+      <div class="content">
+        <h3>{{ h.name }}</h3>
+        <p>{{ h.location }}</p>
+      </div>
+
+      <div class="actions">
+
+        <button class="delete" (click)="delete(h.id)">
+          Delete
+        </button>
+
+        <button class="rooms" (click)="manageRooms(h.id)">
+          Manage Rooms
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

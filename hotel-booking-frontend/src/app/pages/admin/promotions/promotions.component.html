@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div class="page">
+
+  <!-- 🔥 CREATE CARD -->
+  <div class="card">
+    <h2>Create Promotion</h2>
+
+    <input type="text" placeholder="Title" [(ngModel)]="form.title" />
+
+    <input type="number" placeholder="Discount %" [(ngModel)]="form.discountPercentage" />
+
+    <label>Start Date</label>
+    <input type="date" [(ngModel)]="form.startDate" />
+
+    <label>End Date</label>
+    <input type="date" [(ngModel)]="form.endDate" />
+
+    <button (click)="create()">Create</button>
+  </div>
+
+  <!-- 🔥 LIST -->
+  <div class="list">
+
+    <div *ngFor="let p of promotions" class="promo-card">
+
+      <div class="left">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.discountPercentage }}% OFF</p>
+
+        <small>
+          {{ p.startDate | date }} → {{ p.endDate | date }}
+        </small>
+      </div>
+
+      <div class="right">
+        <button class="delete" (click)="delete(p.id)">
+          Delete
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

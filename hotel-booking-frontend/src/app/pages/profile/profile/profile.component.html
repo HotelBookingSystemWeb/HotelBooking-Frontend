@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<div class="profile-box">
+  <h2>My Profile</h2>
+
+  <input [(ngModel)]="user.name" placeholder="Name" />
+  <input [(ngModel)]="user.email" placeholder="Email" />
+  <input [(ngModel)]="user.phoneNumber" placeholder="Phone" />
+
+  <button (click)="update()">Update Profile</button>
+
+  <p class="success">{{ success }}</p>
+</div>

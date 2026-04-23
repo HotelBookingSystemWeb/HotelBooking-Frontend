@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="booking-page">
+
+  <h2 class="title">Manage Bookings</h2>
+
+  <div class="booking-grid">
+
+    <div class="booking-card" *ngFor="let b of bookings">
+
+      <!-- LEFT -->
+      <div class="left">
+        <div class="id">#{{ b.id }}</div>
+        <div class="room">Room {{ b.roomId }}</div>
+      </div>
+
+      <!-- MIDDLE -->
+      <div class="middle">
+        <p><strong>Check-In:</strong> {{ b.checkInDate | date }}</p>
+        <p><strong>Check-Out:</strong> {{ b.checkOutDate | date }}</p>
+        <p><strong>Total:</strong> ₹{{ b.totalAmount }}</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+
+        <span class="status"
+          [ngClass]="{
+            confirmed: b.status === 'Confirmed',
+            cancelled: b.status === 'Cancelled'
+          }">
+          {{ b.status }}
+        </span>
+
+        <button class="cancel" (click)="cancel(b.id)">
+          Cancel
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+
+<div class="form">
+  <h2>Book Room</h2>
+
+  <input [(ngModel)]="data.roomId" placeholder="Room ID" />
+  <input type="date" [(ngModel)]="data.checkInDate" />
+  <input type="date" [(ngModel)]="data.checkOutDate" />
+
+  <button (click)="book()">Confirm Booking</button>
+</div>

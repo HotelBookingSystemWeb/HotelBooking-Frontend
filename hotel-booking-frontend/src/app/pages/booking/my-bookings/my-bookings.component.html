@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <h2 class="title">My Bookings</h2>
+
+  <div class="booking-grid">
+
+    <div class="booking-card" *ngFor="let b of bookings">
+
+      <div class="top">
+        <h3>#{{ b.bookingNumber }}</h3>
+
+        <span 
+          class="status"
+          [ngClass]="{
+            'confirmed': b.status === 'Confirmed',
+            'cancelled': b.status === 'Cancelled'
+          }">
+          {{ b.status }}
+        </span>
+      </div>
+
+      <p><strong>Room:</strong> {{ b.roomId }}</p>
+
+      <p><strong>Check-in:</strong> {{ b.checkInDate | date }}</p>
+      <p><strong>Check-out:</strong> {{ b.checkOutDate | date }}</p>
+
+      <p class="amount">₹ {{ b.totalAmount }}</p>
+
+      <!-- 🔥 CANCEL BUTTON -->
+      <button 
+        *ngIf="b.status === 'Confirmed'" 
+        (click)="cancel(b)">
+        Cancel Booking
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- EMPTY -->
+  <div *ngIf="bookings.length === 0" class="empty">
+    No bookings yet
+  </div>
+
+</div>

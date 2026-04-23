@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <h2>Manage Rooms</h2>
+
+  <!-- 🔥 Add Room Form -->
+  <div class="form">
+    <input [(ngModel)]="form.roomNumber" placeholder="Room Number" />
+    <input [(ngModel)]="form.price" placeholder="Price" />
+    <input [(ngModel)]="form.capacity" placeholder="Capacity" />
+
+    <button (click)="create()">Add Room</button>
+  </div>
+
+  <!-- 🔥 Rooms List -->
+  <div class="list">
+
+    <div class="card" *ngFor="let r of rooms">
+      <h4>Room {{ r.roomNumber }}</h4>
+      <p>Price: ₹{{ r.pricePerNight }}</p>
+      <p>Capacity: {{ r.capacity }}</p>
+
+      <button (click)="delete(r.id)">Delete</button>
+    </div>
+
+  </div>
+
+  <!-- 🔥 Empty State -->
+  <div *ngIf="rooms.length === 0">
+    <p>No rooms available for this hotel</p>
+  </div>
+
+</div>

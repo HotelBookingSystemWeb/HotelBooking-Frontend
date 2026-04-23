@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<!-- 🔥 HERO -->
+<div class="hero">
+  <div class="overlay">
+    <h1>Find Your Perfect Stay</h1>
+    <p>Luxury • Comfort • Best Prices</p>
+
+    <!-- 🔥 SEARCH -->
+    <div class="search-wrapper">
+      <div class="search-box">
+
+        <div class="search-input">
+          <input
+            [(ngModel)]="searchText"
+            placeholder="Search by city or hotel..."
+          />
+        </div>
+
+        <button (click)="search()">Search</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🔥 LOADER -->
+<div *ngIf="loading" class="loader-box">
+  <app-loader></app-loader>
+</div>
+
+<!-- 🔥 HOTELS -->
+<div class="container" *ngIf="!loading">
+  <h2 class="section-title">Explore Hotels</h2>
+
+  <div class="grid">
+    <app-hotel-card
+      *ngFor="let h of hotels"
+      [hotel]="h">
+    </app-hotel-card>
+  </div>
+
+  <!-- 🔥 EMPTY -->
+  <div *ngIf="hotels.length === 0" class="no-data">
+    No hotels found
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <div class="logo" (click)="goHome()">HotelBooking</div>
+
+  <div class="links">
+
+    <!-- GUEST / USER -->
+    <ng-container *ngIf="!isAdmin()">
+      <a routerLink="/home">Home</a>
+
+      <ng-container *ngIf="isLoggedIn()">
+        <a routerLink="/hotels">Hotels</a>
+        <!-- <a routerLink="/offers">Offers</a> -->
+        <a routerLink="/bookings">My Bookings</a>
+      </ng-container>
+    </ng-container>
+
+    <!-- ADMIN -->
+    <ng-container *ngIf="isAdmin()">
+      <a routerLink="/admin/dashboard">Dashboard</a>
+      <a routerLink="/admin/users">Users</a>
+      <a routerLink="/admin/hotels">Hotels</a>
+      <a routerLink="/admin/bookings">Bookings</a>
+      <a routerLink="/admin/promotions">Promotions</a>
+    </ng-container>
+
+  </div>
+
+  <div class="actions">
+    <button *ngIf="!isLoggedIn()" routerLink="/login">Login</button>
+    <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+  </div>
+</nav>

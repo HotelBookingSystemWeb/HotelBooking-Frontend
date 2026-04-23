@@ -1,0 +1,17 @@
+<div class="hotel-card" (click)="viewDetails()">
+
+  <!-- 🔥 IMAGE -->
+  <img [src]="'assets/images/hotel' + ((hotel.id % 4) + 1) + '.avif'" />
+
+  <!-- 🔥 CONTENT -->
+  <div class="content">
+
+    <h3>{{ hotel.name }}</h3>
+
+    <p class="location"> {{ hotel.location }}</p>
+
+    <button>View Rooms</button>
+
+  </div>
+
+</div>

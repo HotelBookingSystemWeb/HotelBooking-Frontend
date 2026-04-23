@@ -1,0 +1,24 @@
+<div class="room-card">
+
+  <div class="left">
+    <img src="assets/images/room1.jpg" />
+  </div>
+
+  <div class="middle">
+    <h3>Room {{ room.roomNumber }}</h3>
+    <p>Capacity: {{ room.capacity }}</p>
+    <p>₹{{ room.pricePerNight }} / night</p>
+  </div>
+
+  <div class="right">
+
+    <div class="price">
+      ₹{{ room.pricePerNight }}
+    </div>
+
+    <!-- 🔥 ONLY BUTTON -->
+    <button (click)="bookNow()">Reserve</button>
+
+  </div>
+
+</div>

@@ -1,0 +1,65 @@
+.hotel-header {
+  padding: 20px;
+}
+
+.date-bar {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.date-bar input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.date-bar button {
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.room-card {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.room-card img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+.middle {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.right {
+  text-align: right;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+}

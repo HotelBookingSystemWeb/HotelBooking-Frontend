@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+
+<h2>Send Promotion Email</h2>
+
+<input [(ngModel)]="data.subject" placeholder="Subject" />
+<textarea [(ngModel)]="data.body" placeholder="Message"></textarea>
+
+<button (click)="send()">Send</button>

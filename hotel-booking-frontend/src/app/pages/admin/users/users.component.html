@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+
+<div class="page">
+
+  <h2 class="title">Users</h2>
+
+  <div class="table-card">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let u of users">
+
+          <td>{{ u.name }}</td>
+          <td>{{ u.email }}</td>
+
+          <!-- 🔥 STATUS -->
+          <td>
+            <span class="status" [ngClass]="u.isActive ? 'active' : 'inactive'">
+              {{ u.isActive ? 'Active' : 'Blocked' }}
+            </span>
+          </td>
+
+          <!-- 🔥 ACTIONS -->
+          <td class="actions">
+            <button class="toggle" (click)="toggle(u.id)">
+              Toggle
+            </button>
+
+            <button class="delete" (click)="delete(u.id)">
+              Delete
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

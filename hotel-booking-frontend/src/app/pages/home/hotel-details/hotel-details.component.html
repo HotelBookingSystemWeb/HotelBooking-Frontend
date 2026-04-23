@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<!-- 🔥 HOTEL HEADER -->
+<div class="hotel-header">
+  <h1>{{ hotel?.name }}</h1>
+  <p>{{ hotel?.location }}</p>
+</div>
+
+<!-- 🔥 DATE BAR -->
+<div class="date-bar">
+  <input type="date" [(ngModel)]="checkInDate" />
+  <input type="date" [(ngModel)]="checkOutDate" />
+
+  <button (click)="loadAvailableRooms()">
+    Check Availability
+  </button>
+</div>
+
+<!-- 🔥 ROOMS SECTION -->
+<div class="container">
+
+  <h3>Available Rooms</h3>
+
+  <!-- EMPTY -->
+  <div *ngIf="rooms.length === 0" class="empty">
+    No rooms available for selected dates
+  </div>
+
+  <!-- 🔥 ROOM LIST -->
+  <div class="room-card" *ngFor="let r of rooms">
+
+    <!-- IMAGE -->
+    <div class="left">
+      <img [src]="'assets/images/hotel' + ((hotel?.id % 4) + 1) + '.avif'" />
+    </div>
+
+    <!-- INFO -->
+    <div class="middle">
+      <h3>Room {{ r.roomNumber }}</h3>
+      <p>Capacity: {{ r.capacity }}</p>
+      <p>₹{{ r.pricePerNight }} / night</p>
+    </div>
+
+    <!-- ACTION -->
+    <div class="right">
+
+      <div class="price">
+        ₹{{ getTotalPrice(r.pricePerNight) }}
+      </div>
+
+      <!-- 🔥 FIX: pass full room -->
+      <button (click)="bookRoom(r)">
+        Reserve
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

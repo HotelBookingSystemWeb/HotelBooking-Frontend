@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="page">
+
+  <!-- 🔍 FILTER BAR -->
+  <div class="filters">
+    <input 
+      [(ngModel)]="searchText" 
+      placeholder="Search city or hotel..." 
+    />
+
+    <button (click)="search()">Search</button>
+  </div>
+
+  <!-- 🔄 LOADING -->
+  <div *ngIf="loading" class="loader">
+    <app-loader></app-loader>
+  </div>
+
+  <!-- 🏨 LIST -->
+  <div class="results" *ngIf="!loading">
+
+    <div class="hotel-row" *ngFor="let h of hotels">
+
+<img [src]="'assets/images/hotel' + ((h.id % 4) + 1) + '.avif'" />      <div class="info">
+        <h3>{{ h.name }}</h3>
+        <p> {{ h.location }}</p>
+
+        <button (click)="viewDetails(h.id)">
+          View Rooms
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EMPTY -->
+  <div *ngIf="!loading && hotels.length === 0" class="empty">
+    No hotels found
+  </div>
+
+</div>

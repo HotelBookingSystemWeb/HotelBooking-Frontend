@@ -1,0 +1,74 @@
+.page {
+  padding: 20px 40px;
+}
+
+/* 🔍 FILTER */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.filters input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filters button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  color: white;
+  cursor: pointer;
+}
+
+/* 🏨 LIST */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ROW */
+.hotel-row {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hotel-row img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info {
+  flex: 1;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  color: white;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}

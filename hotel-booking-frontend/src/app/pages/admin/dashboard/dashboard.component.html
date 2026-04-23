@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard">
+
+  <!-- 🔥 STATS -->
+  <div class="stats">
+
+    <div class="card users">
+      <div class="card-content">
+        <h3>{{ stats.users }}</h3>
+        <p>Total Users</p>
+      </div>
+    </div>
+
+    <div class="card bookings">
+      <div class="card-content">
+        <h3>{{ stats.bookings }}</h3>
+        <p>Total Bookings</p>
+      </div>
+    </div>
+
+    <div class="card hotels">
+      <div class="card-content">
+        <h3>{{ stats.hotels }}</h3>
+        <p>Total Hotels</p>
+      </div>
+    </div>
+
+    <div class="card revenue">
+      <div class="card-content">
+        <h3>₹{{ stats.revenue }}</h3>
+        <p>Total Revenue</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 🔥 BOTTOM SECTION -->
+  <div class="bottom">
+
+    <!-- 🔥 RECENT ACTIVITY -->
+    <div class="panel">
+      <h3>Recent Activity</h3>
+
+      <div *ngFor="let b of recentBookings" class="activity-item">
+        <p>
+          <strong>{{ b.bookingNumber }}</strong> -
+          {{ b.status }} -
+          ₹{{ b.totalAmount }}
+        </p>
+      </div>
+
+      <div *ngIf="recentBookings.length === 0">
+        No recent activity
+      </div>
+    </div>
+
+    <!-- 🔥 SYSTEM STATUS -->
+   
+
+  </div>
+
+</div>

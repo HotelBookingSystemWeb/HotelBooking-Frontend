@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<div class="page">
+
+  <h2> Latest Offers</h2>
+
+  <div *ngIf="loading">
+    <app-loader></app-loader>
+  </div>
+
+  <div *ngIf="!loading && offers.length === 0">
+    No offers available
+  </div>
+
+  <div class="offer-card" *ngFor="let o of offers">
+
+    <h3>{{ o.title }}</h3>
+
+    <p> Discount: {{ o.discountPercentage }}%</p>
+
+    <p> Valid till: {{ o.validTo | date }}</p>
+
+  </div>
+
+</div>
